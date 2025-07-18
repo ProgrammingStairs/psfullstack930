@@ -24,3 +24,30 @@ Units
    5 vw = 5 % of 500px
         = 5/100 * 500
         = 25px
+
+4. em and rem 
+
+em = empherical unit
+rem = root empherical unit
+
+By default : 
+1em = 16px 
+2em = 32px 
+2.5em = 40px
+
+With respect to parent (size : 20px):
+1em = 20px 
+2em = 40px 
+2.5em = 50px 
+ 
+
+By default : 
+1rem = 16px 
+2rem = 32px 
+2.5rem = 40px
+
+With respect to html root element (size : 20px):
+1rem = 20px 
+2rem = 40px 
+2.5rem = 50px 
+  
