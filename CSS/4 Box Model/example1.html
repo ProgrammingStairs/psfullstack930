@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Element | Tag selector */
+        input{
+            height: 40px;
+            width: 400px;
+            margin: 5px;    
+        }
+        /* Attribute selector */
+        input[type='submit']{
+            background-color: black;
+            color:white;
+            border-width: 0px;
+            width: 408px;
+            font-family: cursive;
+            border-radius: 20px;
+        }
+        input[type='text']{
+            background-color: #234567;
+            color: white;
+        }
+        input[type='email']{
+            background-color: #234567;
+            color: white;
+            text-transform: uppercase;
+        }
+        input[type='password']{
+            background-color: #234567;
+            color:#234567;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="Enter Username"> <br>
+    <input type="email" placeholder="Enter Email"> <br>
+    <input type="password" placeholder="Enter Password"> <br>
+    <input type="submit" value="Register">
+</body>
+</html>

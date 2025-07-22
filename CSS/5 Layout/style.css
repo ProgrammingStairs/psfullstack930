@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    font-family: cursive;
+}
+#header{
+    height: 60px;
+    border-style: solid;
+    background-color: #234567;
+}
+#navbar{
+    height: 50px;
+    border-style: solid;
+        background-color: #235432;
+}
+#banner{
+    height: 350px;
+    border-style: solid;
+        background-color: #989898;
+
+}
+#about{
+    height: 80px;
+    border-style: solid;
+        background-color: #123456;
+
+}
+#contact{
+    height: 80px;
+    border-style: solid;
+        background-color: #565656;
+
+}
+#footer{
+    height: 40px;
+    border-style: solid;
+        background-color: #303030;
+
+}

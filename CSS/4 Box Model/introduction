@@ -1,0 +1,80 @@
+Margin : 
+Direction : Outside
+Color : No color 
+Properties : 
+    margin-top : 20px
+    margin-right : 20px
+    margin-bottom : 20px
+    margin-left : 20px
+    
+    margin : 20px;
+        _______|______
+        |   |     |   |
+        T   R     B   L  
+
+    margin : 20px   30px;
+            ___|__  __|__
+            |     | |    |
+            T     B R    L 
+
+    margin : 20px   30px   40px ;
+               |    __|__     |
+               |    |    |    |
+               T    R    L    B 
+
+    margin : 20px 30px 10px 20px;
+               T    R   B    L   
+
+Border : 
+Direction : Outside
+Color : Yes 
+Properties : 
+    border-top : 20px
+    border-right : 20px
+    border-bottom : 20px
+    border-left : 20px
+    
+    border : 20px;
+        _______|______
+        |   |     |   |
+        T   R     B   L  
+
+    border : 20px   30px;
+            ___|__  __|__
+            |     | |    |
+            T     B R    L 
+
+    border : 20px   30px   40px ;
+               |    __|__     |
+               |    |    |    |
+               T    R    L    B 
+
+    border : 20px 30px 10px 20px;
+               T    R   B    L   
+
+Padding : 
+Direction : Inside
+Color : No color 
+Properties : 
+    padding-top : 20px
+    padding-right : 20px
+    padding-bottom : 20px
+    padding-left : 20px
+    
+    padding : 20px;
+        _______|______
+        |   |     |   |
+        T   R     B   L  
+
+    padding : 20px   30px;
+            ___|__  __|__
+            |     | |    |
+            T     B R    L 
+
+    padding : 20px   30px   40px ;
+               |    __|__     |
+               |    |    |    |
+               T    R    L    B 
+
+    padding : 20px 30px 10px 20px;
+               T    R   B    L   
