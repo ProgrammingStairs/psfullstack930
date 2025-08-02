@@ -1,0 +1,21 @@
+body{
+    background-color: bisque;
+}
+
+@media screen and (max-width:1100px){
+    body{
+        background-color: orange;
+    }
+}
+
+/* @media screen and (max-width:800px){
+    body{
+        background-color: crimson;
+    }
+} */
+
+@media screen and (min-width:800px) and (max-width:1000px){
+    body{
+        background-color: crimson;
+    }
+}

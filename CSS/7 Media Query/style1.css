@@ -1,0 +1,31 @@
+*{
+    margin:0px;
+}
+#box{
+    height:auto;
+    background-color: dodgerblue;
+    padding: 40px;
+    float: left;
+}
+#innerdiv{
+    height: auto;
+    padding: 2%;
+    color:white;
+    float: left;
+    width: 19%;
+    margin: 1%;
+    background-color: black;
+}
+
+@media screen and (max-width:900px){
+    #innerdiv{
+        width: 44%;
+    }
+}
+
+
+@media screen and (max-width:550px){
+    #innerdiv{
+        width: 92%;
+    }
+}
