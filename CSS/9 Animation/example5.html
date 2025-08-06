@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 60px;
+            width: 150px;
+            background-color: red;
+            margin: 10px;
+        }
+        #demo1{
+            animation-name: demo1Ani;
+            animation-duration: 4s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+        @keyframes demo1Ani {
+            0%{width:150px;}
+            100%{width: 500px;}
+        }
+        #demo2{
+            animation-name: demo2Ani;
+            animation-duration: 4s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+        }
+        @keyframes demo2Ani {
+            0%{width:150px;}
+            100%{width: 500px;}
+        }
+        #demo3{
+            animation-name: demo3Ani;
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes demo3Ani {
+            0%{width:150px;}
+            100%{width: 500px;}
+        }
+        #demo4{
+            animation-name: demo4Ani;
+            animation-duration: 4s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes demo4Ani {
+            0%{width:150px;}
+            100%{width: 500px;}
+        }
+
+    </style>
+</head>
+<body>
+    <div id="demo1">ease</div>
+    <div id="demo2">ease-in</div>
+    <div id="demo3">ease-in-out</div>
+    <div id="demo4">ease-out</div>
+
+</body>
+</html>
