@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 60px;
+            padding: 5px;
+            background-color: dodgerblue;
+            font-family: candara;
+        }
+        #navigation{
+            display: flex;
+            list-style: none;
+            justify-content: flex-end;
+        }
+        #navigation a{
+            font-size: 24px;
+            text-decoration: none;
+            margin-left: 30px;
+            color:white;
+        }
+        @media screen and (max-width:900px){
+            #navigation {
+                justify-content: center;
+            }
+            #navigation a{
+                font-size: 18px;
+                margin-left: 20px;
+            }
+        }
+        @media screen and (max-width:560px){
+            div{
+                height: auto;
+            }
+            #navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+            #navigation a{
+                line-height: 30px;
+                font-size: 18px;
+                /* margin-left: 20px; */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <ul id="navigation">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Product</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">SignIn</a></li>
+        </ul>
+    </div>
+</body>
+</html>
