@@ -1,0 +1,3 @@
+document.write("<br>This is an example of JavaScript");
+document.write("<br><span style='color:red;'>This is an example of JavaScript</span>");
+document.write("<br>This is an example of JavaScript");
