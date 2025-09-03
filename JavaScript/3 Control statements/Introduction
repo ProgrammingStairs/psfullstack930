@@ -38,8 +38,36 @@ b. Conditional control statement
             }
 
    iv. else if ladder 
+   Syntax : 
+            if(condition)
+               statement 1 to n
+            else if(condition)  
+               statement 1 to n
+            else if(condition)  
+               statement 1 to n
+            else if(condition)  
+               statement 1 to n
+            else 
+               statement 1 to n
 
 
 c. Switch control statement 
+   It is mainly used for menu based programming.
+   It works on the concept of cases. 
+
+            x           5         n%2 
+   switch(variable | constant | expression){
+      case 'a' : 
+            break;
+      case 1 : 
+            break;
+      case "Red" : 
+            break;
+      case 'A' :
+            break;
+      default : 
+            break;
+   }
+
 d. Looping control statement 
 
