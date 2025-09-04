@@ -1,0 +1,25 @@
+<!-- switch control statement -->
+<script>
+    var num1 = parseInt(prompt("Enter first Number"));
+    var num2 = parseInt(prompt("Enter second Number"));
+    
+    if(!isNaN(num1) && !isNaN(num2)){
+        alert("Select Operation\n1 for Add\n2 for Sub\n3 for Mul\n4 for exit");
+
+        var choice = parseInt(prompt("Enter Choice"));
+        switch(choice){
+            case 1 : alert("add : "+(num1+num2));
+                        break;
+            case 2 : alert("sub : "+(num1-num2));
+                        break;
+            case 3 : alert("mul : "+(num1*num2));
+                        break;
+            case 4 : alert("Thanks for Visit");
+                        break;
+            default : alert("Invalid Choice");
+                        break;
+        }
+    }else{
+        alert("Invalid");
+    }    
+</script>
