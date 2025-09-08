@@ -1,0 +1,13 @@
+<!-- looping control statement | for loop -->
+<script>
+    var num = parseInt(prompt("Enter number"));
+    if(isNaN(num)){
+        alert("Please enter valid number");
+    }else{
+        var fact=1;
+        for(var i=1;i<=num;i++){
+            fact=fact*i;
+        }
+        document.write("Factorial : "+fact);
+    }    
+</script>

@@ -1,0 +1,28 @@
+<!-- looping control statement | for in loop -->
+<script>
+    var arr = [12,23,34,443,32,21];
+    document.write("Array elements are : "+arr);
+
+    document.write("<br>for in Loop | Array elements are : <br>");
+    for(var index in arr){
+        document.write("index : "+index+" Element : "+arr[index]+"<br>");
+    }
+
+    document.write("<br>for of Loop | Array elements are : <br>");
+    for(var value of arr){
+        document.write("Element : "+value+"<br>");
+    }
+
+    document.write("<br>for each Loop | Array elements are : <br>");
+    arr.forEach(function(element){
+        document.write("Element : "+element+"<br>");
+    }); 
+</script>
+
+          <!-- 
+1. Reversing a three digit number
+2. find sum of first and last digits of 5 digit number 
+3. interchange first and last digit of 4 digit no. 
+       2453 ======> 3452  
+4. check whether 3 digit no. is palindrome or not
+          -->
