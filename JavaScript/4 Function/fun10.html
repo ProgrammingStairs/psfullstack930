@@ -1,0 +1,12 @@
+<!-- recursion -->
+<script>
+    var num = parseInt(prompt("Enter number : "));
+    function fact(n){
+        if(n==0)
+            return 1;
+        else
+            return n * fact(n-1);
+    }
+    document.write("Factorial : "+fact(num));    
+</script>
+

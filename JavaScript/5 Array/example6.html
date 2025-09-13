@@ -1,0 +1,12 @@
+<script>
+    var arr = [23,34,43,3,213,34];
+    
+    document.write("<br>Array elements are : <br>");
+    
+    var res = arr.reduce(function(a,b){
+        document.write("a : "+a+" b : "+b+"<br>"); 
+        return a+b;
+    },0);
+    document.write("<br>"+res+"<br>");    
+
+</script>

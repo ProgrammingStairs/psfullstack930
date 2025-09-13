@@ -1,0 +1,17 @@
+Array : 
+
+1. Array is a collection of heterogenous data elements(different type of data elements)
+2. Array works on the concept of indexing.
+3. Array indexing always starts from 0 beccause it follows number system.
+4. Array is a non primitive datatype 
+5. Prerequisite for array allocation is base address 
+6. Array works on continuous memory allocation 
+7. Array elements shares same name but differentiable by there indexing  
+8. Types of array : 
+    a. One dimensional array
+    b. Two dimensional array
+    c. Multidimensional array
+9. There is also a special type of 2d array and that is Jagged Array 
+10. Array is represented by : 
+    <variable_type> <array_name> = [];
+    ex : var arr = [];

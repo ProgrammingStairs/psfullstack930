@@ -1,0 +1,19 @@
+<script>
+    var arr = [23,34,43,3,213,34];
+    
+    document.write("<br>Array elements are : <br>");
+    
+    var res = arr.some((element,index)=>{
+         document.write("index : "+index+"<br>");
+         return element>1000;
+    });
+    document.write("<br>"+res+"<br>");
+    
+    // var res = arr.every((element,index)=>{
+    //      document.write("index : "+index+"<br>");
+    //      return element>10;
+    // });
+    // document.write("<br>"+res+"<br>");
+    
+
+</script>

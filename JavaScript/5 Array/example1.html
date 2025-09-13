@@ -1,0 +1,25 @@
+<script>
+    var arr = [23,34,43,3,213,34];
+    document.write("<br>Array elements are : "+arr+"<br>");
+
+    document.write("<br>Array elements are : <br>");
+    for(var i=0;i<arr.length;i++){
+        document.write(arr[i]+"&nbsp;&nbsp;&nbsp;&nbsp;");
+    }
+
+    document.write("<br>Array elements are : <br>");
+    for(var i in arr){
+        document.write(arr[i]+"&nbsp;&nbsp;&nbsp;&nbsp;");
+    }
+
+    document.write("<br>Array elements are : <br>");
+    for(var value of arr){
+        document.write(value+"&nbsp;&nbsp;&nbsp;&nbsp;");
+    }
+
+    document.write("<br>Array elements are : <br>");
+    arr.forEach(function(element){
+        document.write(element+"&nbsp;&nbsp;&nbsp;&nbsp;");
+    });
+    
+</script>

@@ -1,0 +1,14 @@
+<!-- recursion -->
+<script>
+    var b = parseInt(prompt("Enter base : "));
+    var e = parseInt(prompt("Enter exponent : "));
+
+    function power(b,e){
+        if(e==0)
+            return 1;
+        else
+            return b * power(b,e-1);
+    }
+    document.write("power : "+power(b,e));    
+</script>
+
