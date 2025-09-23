@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>      
+        <script>
+            function changeColor(color){
+                var para=document.getElementsByTagName("p");
+                for(i=0;i<para.length;i++){
+                    para[i].style.color=color;
+                }
+            }
+        </script>
+    </head>
+<body>
+    <button onclick="changeColor('red')">Red</button>
+<button onclick="changeColor('blue')">Blue</button>
+<button onclick="changeColor('green')">Green</button>
+
+    <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit aperiam deleniti, facilis fugiat excepturi ipsam quasi in molestiae error temporibus. Ullam maiores temporibus mollitia! Omnis alias iste amet! Ullam, ex?</p>
+
+    <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit aperiam deleniti, facilis fugiat excepturi ipsam quasi in molestiae error temporibus. Ullam maiores temporibus mollitia! Omnis alias iste amet! Ullam, ex?</p>
+
+    <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit aperiam deleniti, facilis fugiat excepturi ipsam quasi in molestiae error temporibus. Ullam maiores temporibus mollitia! Omnis alias iste amet! Ullam, ex?</p>
+</body>
+</html>

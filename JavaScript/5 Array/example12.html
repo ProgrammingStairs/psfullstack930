@@ -1,0 +1,27 @@
+<script>
+var arr=[];
+var rows = parseInt(prompt("Enter no. of rows : "));
+var cols = parseInt(prompt("Enter no. of columns : "));
+
+for(i=0;i<rows;i++){
+    arr[i]=[];
+    for(j=0;j<cols;j++){
+        arr[i][j] = parseInt(prompt("Enter element : "));
+    }
+}
+if(rows==cols){
+    var sum=0;
+    document.write("<br>Array elements are : <br>");
+    for(i=0;i<arr.length;i++){
+        for(j=0;j<arr[i].length;j++){
+            if(i==j)
+                sum = sum + arr[i][j];
+            document.write(arr[i][j]+" ");
+        }
+    document.write("<br>");
+    }
+    document.write("<br>sum : "+sum);
+}else{
+    document.write("sum not possible");
+}
+</script>

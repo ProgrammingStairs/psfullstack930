@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+      
+    </head>
+<body>
+    <span id="show"></span> <button onClick="myFun()">Click</button> 
+    <p id="display"></p>
+      <script>
+            var show = document.getElementById("show");
+            var d="";
+            function demo(){
+                data = new Date().toLocaleTimeString();
+                show.innerHTML = data;
+                return data;
+            }
+            function myFun(){
+                    d += demo()+"<br>";
+                    document.getElementById("display").innerHTML = d;
+            }
+            setInterval(demo,1000);
+
+        </script>
+</body>
+</html>

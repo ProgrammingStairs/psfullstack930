@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>      
+        <script>
+            function printItem(){
+                var inputArray = document.getElementsByTagName("input");
+                var item='';
+                for(i=0;i<inputArray.length;i++){
+                    if(inputArray[i].checked){
+                        item += inputArray[i].value+" ";
+                    }
+                }
+                var res = item ? "You select "+item : "You Haven't Selected Anything"; 
+                alert(res);
+            }
+        </script>
+    </head>
+<body>
+<h1>Select Item</h1>
+<input type="checkbox" name="Chocolate" id="Chocolate" value="Chocolate">Chocolate <br>
+<input type="checkbox" name="Coffee" id="Coffee" value="Coffee">Coffee <br>
+<input type="checkbox" name="IceCream" id="IceCream" value="IceCream">IceCream <br>
+<input type="checkbox" name="Mojito" id="Mojito" value="Mojito">Mojito <br>
+<input type="checkbox" name="Shake" id="Shake" value="Shake">Shake <br>
+<button onclick="printItem()">Check Item</button>
+</body>
+</html>

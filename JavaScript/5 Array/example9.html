@@ -1,0 +1,21 @@
+<script>
+    var size = parseInt(prompt("Enter size of array : "));
+    var arr = [];
+    alert("Enter array elements : ");
+    for(var i=0;i<size;i++){
+        arr[i] = parseInt(prompt("Enter array element : "));
+    }
+    document.write("<br>Array elements are : "+arr+"<br>");
+    var min = arr[0];
+    var max = arr[0];
+    for(i=0;i<size;i++){
+        if(arr[i]<min)
+            min = arr[i];
+
+        if(arr[i]>max)
+            max = arr[i];
+    }    
+    document.write("<br>Minimum element : "+min);
+    document.write("<br>Maximum element : "+max);
+    
+</script>

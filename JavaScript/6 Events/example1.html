@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFun() {
+            alert("Button clicked");
+        }
+
+    </script>
+</head>
+
+<body>
+    <button onclick="alert('Button Clicked')">Click</button>
+    <button ondblclick="alert('Button Clicked')">Click</button>
+    <button oncontextmenu="alert('Button Clicked')">Click</button>
+    <button onclick="myFun()">Click</button>
+    <button id="btn">Click</button>
+    <script>
+        var btn = document.getElementById("btn");
+        console.log("=========> : ", btn);
+        btn.addEventListener("click", () => {
+            alert("Button clicked");
+        });
+    </script>
+</body>
+
+</html>

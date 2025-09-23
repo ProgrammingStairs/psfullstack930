@@ -1,0 +1,19 @@
+<script>
+// methods of array
+var arr = [23,32,21,19,13,56,76,6];
+document.write("<br>arr : "+arr.sort());
+document.write("<br>arr : "+arr.sort((a,b)=>{
+    return a-b;
+}));
+document.write("<br>arr : "+arr.sort((a,b)=>{
+    return b-a;
+}));
+document.write("<br>res : "+arr.reverse());
+document.write("<br>max : "+Math.max.apply(null,arr));
+document.write("<br>min : "+Math.min.apply(null,arr));
+document.write("<br>max : "+Math.max(23,32,21,19,13,56,76,6));
+document.write("<br>min : "+Math.min(23,32,21,19,13,56,76,6));
+document.write("<br>max : "+Math.max(...arr));
+document.write("<br>min : "+Math.min(...arr));
+
+</script>

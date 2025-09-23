@@ -1,0 +1,27 @@
+<script>
+// concept of multi dimensional array
+var arr = [],count=0;
+
+for(i=0;i<2;i++){ // no. of 2d matrix
+    arr[i] = [];
+    for(j=0;j<3;j++){ // no. of rows 
+        arr[i][j] = [];
+        for(k=0;k<3;k++){ // no. of columns
+            arr[i][j][k] = count++;
+        }
+    }
+}
+
+document.write("Array elements are : <br>");
+for(i=0;i<2;i++){ // no. of 2d matrix
+    for(j=0;j<3;j++){ // no. of rows 
+        for(k=0;k<3;k++){ // no. of columns
+            document.write("&nbsp;&nbsp;&nbsp;"+arr[i][j][k]);
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+}
+
+
+</script>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+      
+    </head>
+<body>
+    <p id="show"></p>
+    <button onclick="document.getElementById('print').innerHTML=new Date()">Click</button>
+    <button onclick="document.getElementById('print').innerHTML=new Date().toLocaleTimeString()">Click</button>
+    <button onclick="document.getElementById('print').innerHTML=new Date().toLocaleDateString()">Click</button>
+    <button onclick="this.innerHTML=new Date()">Click</button>
+    <p id="print"></p>
+      <script>
+            var show = document.getElementById("show");
+            setInterval(()=>{
+                show.innerHTML = new Date().toLocaleTimeString();
+            },1000);
+        </script>
+</body>
+</html>

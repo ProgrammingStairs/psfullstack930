@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>      
+        <script>
+            function zoom(value){
+                var imageObj = document.getElementById("image");
+                if(value==0){
+                    imageObj.height += 50;
+                    imageObj.width += 50;
+                }else{
+                    imageObj.height -= 50;
+                    imageObj.width -= 50;
+                }
+            }
+        </script>
+    </head>
+<body>
+    <img src="img4.png" height="300" width="300" id="image" alt=""> <br>
+    <button onclick="zoom(0)">ZoomIn</button>
+    <button onclick="zoom(1)">ZoomOut</button>
+</body>
+</html>
