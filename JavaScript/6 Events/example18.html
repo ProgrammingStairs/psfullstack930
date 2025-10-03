@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function focEmail(){
+            var email = document.getElementById("email");
+            email.style.textTransform="uppercase";
+        }
+        function focPassword(){
+            var password = document.getElementById("password");
+            password.style.color="skyblue";
+        }
+        function br(){
+            var email = document.getElementById("email");
+            var password = document.getElementById("password");
+            email.style.backgroundColor = "skyblue";
+            email.style.color = "#234567";
+            password.style.backgroundColor = "skyblue";
+            password.style.color = "#234567";
+        }
+
+</script>
+
+</head>
+<body>
+<form action="" onsubmit="alert('Form Submitted Successfully')">
+    <input type="email" id="email" placeholder="Enter email" onfocus="focEmail()" onblur="br()"> <br>
+    <input type="password" id="password" placeholder="Enter password" onfocus="focPassword()" onblur="br()"> <br>
+    <button>Submit</button>
+</form>
+</body>
+</html>

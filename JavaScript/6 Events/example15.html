@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function operation(currentObject){
+            var num1 = parseInt(document.getElementById("num1").value);
+            var num2 = parseInt(document.getElementById("num2").value);
+            var res;
+            switch(currentObject.value){
+                case '+' : 
+                    res = num1 + num2;
+                    document.getElementById("res").value=res;
+                    document.getElementById("add").value="Add : "+res;
+                    document.getElementById("msg").innerHTML = "Result : "+res;
+                    break;
+                case '-' : 
+                    res = num1 - num2;
+                    document.getElementById("res").value=res;
+                    document.getElementById("sub").value="Sub : "+res;
+                    document.getElementById("msg").innerHTML = "Result : "+res;
+                    break;
+                }
+        }
+    </script>
+</head>
+<body>
+    <h2>JavaScript Example</h2>
+    <input type="text" placeholder="Enter first number" id="num1" name="num1"> <br>
+    <input type="text" placeholder="Enter second number" id="num2" name="num2"> <br>
+    <input type="text" placeholder="Result" id="res" name="res" readonly> <br>
+    <input onclick="operation(this)" id="add" type="submit" value="+"> 
+    <input onclick="operation(this)" id="sub" type="submit" value="-"> 
+    <input onclick="operation(this)" id="mul" type="submit" value="x"> 
+    <input onclick="operation(this)" id="div" type="submit" value="/"> 
+    <br> <span id="msg">Result will Show Here</span>
+
+</body>
+</html>

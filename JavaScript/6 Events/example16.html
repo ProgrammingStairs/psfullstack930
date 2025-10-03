@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function move(){
+            var demo1 = document.getElementById("demo1");
+            demo1.style.backgroundColor="wheat";
+        }
+        function over(){
+            var demo2 = document.getElementById("demo2");
+            demo2.style.color="crimson";
+        }
+        function enter(){
+            var demo3 = document.getElementById("demo3");
+            demo3.style.textTransform="uppercase";
+        }
+        function leave(){
+            var demo4 = document.getElementById("demo4");
+            demo4.style.textDecoration="line-through";
+        }
+        function up(){
+            var demo5 = document.getElementById("demo5");
+            demo5.style.fontFamily="cursive";
+        }
+        function down(){
+            var demo6 = document.getElementById("demo6");
+            demo6.style.fontSize="30px";
+        }
+</script>
+</head>
+<body>
+    <span onmousemove = "move()" id="demo1">Lorem ipsum dolor sit amet.</span> <br>
+    <span onmouseover = "over()" id="demo2">Lorem ipsum dolor sit amet.</span> <br>
+    <span onmouseenter = "enter()" id="demo3">Lorem ipsum dolor sit amet.</span> <br>
+    <span onmouseleave = "leave()" id="demo4">Lorem ipsum dolor sit amet.</span> <br>
+    <span onmouseup = "up()" id="demo5">Lorem ipsum dolor sit amet.</span> <br>
+    <span onmousedown = "down()" id="demo6">Lorem ipsum dolor sit amet.</span> <br>
+    
+</body>
+</html>

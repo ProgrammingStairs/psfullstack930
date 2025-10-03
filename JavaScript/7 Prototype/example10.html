@@ -1,0 +1,16 @@
+<script>
+    // let is block scopic (ES6)
+    
+    let a = 100;
+    document.write("before block a : "+a);
+    a = 200;
+    document.write("<br>before block a : "+a);
+    
+    function show(){
+        let a = 300;
+        document.write("<br>inside block a : "+a);
+    }
+    show();
+        document.write("<br>outside block a : "+a);
+
+</script>

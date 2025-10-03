@@ -1,0 +1,17 @@
+<script>
+    function Employee(name,salary,age){
+        this.name = name;
+        this.salary = salary;
+        this.age = age;
+    }
+    Employee.prototype.pincode = 452010;
+    Employee.prototype.showDetails = function(){
+            document.write("<br>Name : "+this.name);
+            document.write("<br>Salary : "+this.salary);
+            document.write("<br>Age : "+this.age);
+            document.write("<br>Pincode : "+this.pincode);            
+        }
+
+    const emp = new Employee("Andrew Anderson",45678,67);
+    emp.showDetails();
+</script>
