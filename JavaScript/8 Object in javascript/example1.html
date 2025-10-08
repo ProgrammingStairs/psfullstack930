@@ -1,0 +1,25 @@
+<script>
+    // object literal
+    var obj1 = {
+        "Full Name" : "Andrew Anderson",
+        age : 45,
+        salary : 67890,
+        for : true,
+        toString(){
+            return this["Full Name"]+" "+this.age+" "+this.salary+" "+this.for+" "+this.pincode;
+        }
+    }
+    obj1.pincode = 452010;
+
+    document.write("<br>name : "+obj1["Full Name"]);
+    document.write("<br>age : "+obj1.age);
+    document.write("<br>salary : "+obj1.salary);
+    document.write("<br>pincode : "+obj1.pincode);
+    document.write("<br>status : "+obj1.for);
+    document.write("<br>obj1 : "+obj1);
+
+    delete obj1.salary;
+
+    document.write("<br>salary : "+obj1.salary);
+
+</script>

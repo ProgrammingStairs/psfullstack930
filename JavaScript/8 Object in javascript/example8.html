@@ -1,0 +1,53 @@
+<button onclick="myFun()">Show Table</button>
+<div id="show"></div>
+<script>
+    function myFun(){
+        var arr = [{
+            name:"Andrew anderson",
+            address : {
+                city : "Indore",
+                state : "Madhya Pradesh",
+            }
+        },{
+            name:"Peter Parker",
+            address : {
+                city : "Indore",
+                state : "Madhya Pradesh",
+            }
+        },{
+            name:"Jack Jackson",
+            address : {
+                city : "Indore",
+                state : "Madhya Pradesh",
+            }
+        },{
+            name:"Simon Sim",
+            address : {
+                city : "Indore",
+                state : "Madhya Pradesh",
+            }
+        }]
+
+        var table = `<table border='1' cellspacing='0' cellpadding='10'><tr><th>S.No</th><th>Name</th><th>City</th><th>State</th><tr>`
+        for(var index in arr){
+            table+=`<tr><td>${parseInt(index)+1}</td>`;
+            for(var key in arr[index]){
+                if(typeof arr[index][key] == "object"){
+                    for(var subkey in arr[index][key]){
+                        if(typeof arr[index][key][subkey] == "object"){
+                            // ......
+                        }else{
+                            table += `<td>${arr[index][key][subkey]}</td>`     
+                        }
+                    }
+                }else{
+                    table += `<td>${arr[index][key]}</td>`     
+                }
+            }
+            table+=`</tr>`;
+        }
+        table+=`</table>`;
+        document.getElementById("show").innerHTML = table;
+    }
+</script>
+

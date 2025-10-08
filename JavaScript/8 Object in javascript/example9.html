@@ -1,0 +1,71 @@
+<button onclick="myFun()">Show Table</button>
+<div id="show"></div>
+<script>
+    function myFun(){
+        var arr = [{
+            name:"Andrew anderson",
+            address : {
+                state : "Madhya Pradesh",
+                city : {
+                    cityName: "Indore",
+                    colony : "Sukhliya"
+                }
+            }
+        },{
+            name:"Peter Parker",
+            address : {
+                state : "Madhya Pradesh",
+                city : {
+                    cityName: "Indore",
+                    colony : "Sukhliya"
+                }
+            }
+        },{
+            name:"Jack Jackson",
+            address : {
+                state : "Madhya Pradesh",
+                city : {
+                    cityName: "Indore",
+                    colony : "Sukhliya"
+                }
+            }
+        },{
+            name:"Simon Sim",
+            address : {
+                state : "Madhya Pradesh",
+                city : {
+                    cityName: "Indore",
+                    colony : "Sukhliya"
+                }
+            }
+        }]
+
+        var table = `<table border='1' cellspacing='0' cellpadding='10'><tr><th>S.No</th><th>Name</th><th>State</th><th>City</th><th>Colony</th><tr>`
+        for(var index in arr){
+            table+=`<tr><td>${parseInt(index)+1}</td>`;
+            for(var key in arr[index]){
+                if(typeof arr[index][key] == "object"){
+                    for(var subkey in arr[index][key]){
+                        if(typeof arr[index][key][subkey] == "object"){
+                            for(var innerkey in arr[index][key][subkey]){
+                                if(typeof arr[index][key][subkey][innerkey] == "object"){
+                                    //.....    
+                                }else{
+                                    table += `<td>${arr[index][key][subkey][innerkey]}</td>`     
+                                }
+                            }
+                        }else{
+                            table += `<td>${arr[index][key][subkey]}</td>`     
+                        }
+                    }
+                }else{
+                    table += `<td>${arr[index][key]}</td>`     
+                }
+            }
+            table+=`</tr>`;
+        }
+        table+=`</table>`;
+        document.getElementById("show").innerHTML = table;
+    }
+</script>
+

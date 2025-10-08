@@ -1,0 +1,29 @@
+<div id="show"></div>
+<script>
+var arr = [{
+    name:"Andrew anderson",
+    state : "Madhya Pradesh",
+},{
+    name:"Peter Parker",
+    state : "Uttar Pradesh",
+},{
+    name:"Jack Jackson",
+    state : "Gujarat",
+},{
+    name:"Simon Sim",
+    state : "Tamil Nadu",
+}]
+
+var table = `<table border='1' cellspacing='0' cellpadding='10'><tr><th>S.No</th><th>Name</th><th>State</th><tr>`
+for(i=0;i<arr.length;i++){
+    table += `<tr>
+            <td>${i+1}</td>
+            <td>${arr[i].name}</td>
+            <td>${arr[i].state}</td>
+        </tr>`;    
+}
+table+=`</table>`;
+document.getElementById("show").innerHTML = table;
+
+</script>
+

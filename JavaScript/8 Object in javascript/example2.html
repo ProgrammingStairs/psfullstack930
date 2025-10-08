@@ -1,0 +1,28 @@
+<script>
+    // Object constructor or new keyword
+    var obj = new Object();
+        obj["Full Name"] = "Andrew Anderson";
+        obj.age = 45,
+        obj.salary = 67890,
+        obj.for = true,
+    
+    obj.pincode = 452010;
+
+    document.write("<br>name : "+obj["Full Name"]);
+    document.write("<br>age : "+obj.age);
+    document.write("<br>salary : "+obj.salary);
+    document.write("<br>pincode : "+obj.pincode);
+    document.write("<br>status : "+obj.for);
+
+
+    delete obj.salary;
+
+    document.write("<br>salary : "+obj.salary);
+
+       function demo(){
+            //document.write("<br>hello");
+                return "<br>"+obj["Full Name"]+" "+obj.age+" "+obj.salary+" "+obj.for+" "+obj.pincode;
+        }
+
+document.write(demo());
+</script>
