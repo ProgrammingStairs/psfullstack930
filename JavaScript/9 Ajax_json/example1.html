@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <button onclick="showData()">Click to View Data</button>
+     <p id="show"></p>
+    <script>
+        function showData(){
+            var xhttp = new XMLHttpRequest();
+            var method = "GET";
+            var url = "https://jsonplaceholder.typicode.com/posts";
+            var asyncStatus = true;
+            xhttp.open(method,url,asyncStatus);
+            xhttp.send();
+
+            xhttp.onreadystatechange = function(){
+                if(xhttp.readyState==0){
+                    console.log("ready state : ",xhttp.readyState);
+                }
+                if(xhttp.readyState==1){
+                    console.log("ready state : ",xhttp.readyState);
+                }
+                if(xhttp.readyState==2){
+                    console.log("ready state : ",xhttp.readyState);
+                }
+                if(xhttp.readyState==3){
+                    console.log("ready state : ",xhttp.readyState);
+                }
+                if(xhttp.readyState==4 && xhttp.status==200){
+                    var receivedData = JSON.parse(xhttp.responseText);
+                    var table = `<table border='1' cellspacing='0'><tr><td>S.No</td><td>UserId</td><td>Id</td><td>Title</td><td>Body</td></tr>`;
+                        for(var i=0;i<receivedData.length;i++){
+                            table+=`<tr>
+                                <td>${i+1}</td>
+                                <td>${receivedData[i].userId}</td>
+                                <td>${receivedData[i].id}</td>
+                                <td>${receivedData[i].title}</td>
+                                <td>${receivedData[i].body}</td>    
+                            </tr>`;
+                        }
+                        table+=`</table>`;
+                        document.getElementById("show").innerHTML=table;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<script>
+// object destructuring
+var obj = {
+    name:"andrew anderson",
+    salary : 456789,
+    age : 67,
+    address : {
+        city:"indore",
+        state:"madhya pradesh",
+        toString(){
+            return this.city+" "+this.state;
+        }
+    }
+}
+const {name:fullname,age,salary,pincode=12345,address} = obj;
+document.write("<br>name : "+fullname);
+document.write("<br>pincode : "+pincode);
+document.write("<br>age : "+age);
+document.write("<br>salary : "+salary);
+document.write("<br>address : "+address);
+document.write("<br>address.city : "+address.city);
+document.write("<br>address.state : "+address.state);
+
+</script>

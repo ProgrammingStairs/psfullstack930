@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <button onclick="showData()">Click to View Data</button>
+     <p id="show"></p>
+    <script>
+        function showData(){
+            var xhttp = new XMLHttpRequest();
+            var method = "POST";
+            var obj = {
+                userId : 1000,
+                id : 1,
+                title:"Its Title",
+                body : "Its Body"
+            }
+            var url = "https://jsonplaceholder.typicode.com/posts";
+            var asyncStatus = true;
+            xhttp.open(method,url,asyncStatus);
+            xhttp.setRequestHeader('content-type','application/json');
+            xhttp.send(JSON.stringify(obj));
+console.log(JSON.stringify(obj));
+
+            xhttp.onreadystatechange = function(){
+                if(xhttp.readyState==4 && xhttp.status==201){
+                    document.getElementById("show").innerHTML=xhttp.responseText;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

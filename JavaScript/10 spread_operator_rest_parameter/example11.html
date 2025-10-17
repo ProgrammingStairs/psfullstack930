@@ -1,0 +1,22 @@
+<script>
+    // asynchronous
+    
+    function gotoroom(){
+        console.log("gotoroom");
+        
+    }
+    function removegarbage(charge,name){
+        console.log("removegarbage");
+        console.log("\tCleaner name : ",name);
+        console.log("\tCharge taken : ",charge);
+    }
+    function wonprize(){
+        console.log("wonprize");
+    }
+
+    setTimeout(() => {
+        gotoroom();
+    }, 1000);
+    setTimeout(removegarbage,2000,1000,"Andrew Anderson");
+    setInterval(wonprize,3000);
+</script>

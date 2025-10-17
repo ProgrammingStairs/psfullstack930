@@ -1,0 +1,21 @@
+<script>
+    // asynchronous
+    
+    function gotoroom(){
+        console.log("gotoroom");
+        
+    }
+    function removegarbage(){
+        console.log("removegarbage");
+       
+    }
+    function wonprize(){
+        console.log("wonprize");
+    }
+
+    setTimeout(() => {
+        gotoroom();
+    }, 1000);
+    setTimeout(removegarbage,2000);
+    setInterval(wonprize,3000);
+</script>
