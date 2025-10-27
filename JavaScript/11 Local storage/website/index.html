@@ -21,6 +21,8 @@
         <link href="css/bootstrap-icons.css" rel="stylesheet">
 
         <link href="css/templatemo-topic-listing.css" rel="stylesheet">      
+
+        <script src="js/myscript.js"></script>
 <!--
 
 TemplateMo 590 topic listing
@@ -596,7 +598,7 @@ https://templatemo.com/tm-590-topic-listing
 
                                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                          <form action="">
+                                          <form action="profile.html" onsubmit="return checkLogin()">
                                             <input style="outline:0;" class="col-md-12 mb-1 border-0 border-bottom border-2 border-secondary" type="email" placeholder="Enter Email" name="email" id="email" required>
                                             <br>
                                             <input style="outline:0;" type="password" class="col-md-12 mb-1 border-0 border-bottom border-2 border-secondary" placeholder="Enter Password" name="password" id="password" required>
@@ -618,15 +620,15 @@ https://templatemo.com/tm-590-topic-listing
 
                                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                          <form action="">
+                                          <form onsubmit="addUser()">
                                             <input style="outline:0;" class="col-md-12 mb-1 border-0 border-bottom border-2 border-secondary" type="text" placeholder="Enter Username" name="username" id="username" required>
                                             <br>
 
-                                            <input style="outline:0;" class="col-md-12 mb-1 border-0 border-bottom border-2 border-secondary" type="email" placeholder="Enter Email" name="email" id="email" required>
+                                            <input style="outline:0;" class="col-md-12 mb-1 border-0 border-bottom border-2 border-secondary" type="email" placeholder="Enter Email" name="emailreg" id="emailreg" required>
                                             <br>
-                                            <input style="outline:0;" type="password" class="col-md-12 mb-1 border-0 border-bottom border-2 border-secondary" placeholder="Enter Password" name="password" id="password" required>
+                                            <input style="outline:0;" type="password" class="col-md-12 mb-1 border-0 border-bottom border-2 border-secondary" placeholder="Enter Password" name="passwordreg" id="passwordreg" required>
                                             <br>
-                                                                                        <input style="outline:0;" class="col-md-12 mb-1 border-0 border-bottom border-2 border-secondary" type="text" placeholder="Enter Address" name="address" id="address" required>
+                                            <input style="outline:0;" class="col-md-12 mb-1 border-0 border-bottom border-2 border-secondary" type="text" placeholder="Enter Address" name="address" id="address" required>
                                             <br>
 
                                             <input type="submit" value="Register" class="btn btn-secondary">
