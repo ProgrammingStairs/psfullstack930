@@ -39,3 +39,15 @@ function checkLogin(){
         alert("No Record Found | Please Register First");
     }
 }
+
+var productArr = [];
+function addProduct(){
+    var productName = document.getElementById("productName").value;
+    var description = document.getElementById("description").value;
+    var category = document.getElementById("category").value;
+    var file = document.getElementById("file").value;
+    var email = sessionStorage.getItem("email");
+    var obj = {productName,description,category,file,email};
+    productArr = JSON.parse(localStorage.getItem("productData"));
+    localStorage.setItem("productData",JSON.stringify([...productArr||[],obj]));
+}
