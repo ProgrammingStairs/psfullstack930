@@ -97,14 +97,8 @@ https://templatemo.com/tm-590-topic-listing
                     <div class="row">
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="design-tab" data-bs-toggle="tab" data-bs-target="#design-tab-pane" type="button" role="tab" aria-controls="design-tab-pane" aria-selected="true">Add Product</button>
-                            </li>
-
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="marketing-tab" data-bs-toggle="tab" data-bs-target="#marketing-tab-pane" type="button" role="tab" aria-controls="marketing-tab-pane" aria-selected="false">View Product</button>
-                            </li>
-
-                           
+                                <button class="nav-link active" id="design-tab" data-bs-toggle="tab" data-bs-target="#design-tab-pane" type="button" role="tab" aria-controls="design-tab-pane" aria-selected="true">Update Product</button>
+                            </li>           
                         </ul>
                     </div>
                 </div>
@@ -118,100 +112,39 @@ https://templatemo.com/tm-590-topic-listing
                                     <div class="row">
                                         <div style="margin: auto;" class="col-md-6 col-6 mb-4 mb-lg-0">
                                             <div class="custom-block bg-white shadow-lg">
-                                            
+
                                                    
                                                         <div>
-                                                            <h5 class="mb-2">Add Product</h5>
-                                                           <form action="profile.html" onsubmit="addProduct()">
-                                                            <input type="text" placeholder="Enter Product Name" name="productName" id="productName" class="col-md-12 mb-1">
-                                                            <input type="text" placeholder="Enter Product Description" name="description" id="description" class="col-md-12 mb-1">
-                                                            <select placeholder="Enter Product Category" name="category" id="category" class="col-md-12 mb-1">
+                                                            <h5 class="mb-2">Update Product</h5>
+                                                           <form action="" onsubmit="updateProductData()">
+                                                            <input type="text" placeholder="Enter Product Name" name="productNameUpdate" id="productNameUpdate" class="col-md-12 mb-1">
+                                                            <input type="text" placeholder="Enter Product Description" name="descriptionUpdate" id="descriptionUpdate" class="col-md-12 mb-1">
+                                                            <select placeholder="Enter Product Category" name="categoryUpdate" id="categoryUpdate" class="col-md-12 mb-1">
                                                                 <option value="">Select Category</option>
                                                                 <option value="Electronics">Electronics</option>
                                                                 <option value="Cosmetic">Cosmetic</option>
                                                             <option value="Furniture">Furniture</option>
                                                             </select>
-                                                            <input type="file" name="file" id="file" class="col-md-12 mb-1">
-                                                            <input type="submit" class="col-md-12 btn btn-danger" value="Add Product">
+                                                            <span id="fname"></span> 
+                                                            <input type="hidden" name="fileHold" id="fileHold">
+                                                            <br> Choose File to Change
+                                                            <input type="file" name="fileUpdate" id="fileUpdate" class="col-md-12 mb-1">
+                                                            <input type="submit" class="col-md-12 btn btn-danger" value="Update Product">
                                                             </form>
-                                                        </div>
+<script>
+    var obj = JSON.parse(localStorage.getItem("updateProduct"));
+    document.getElementById("productNameUpdate").value=obj.productName;
+    document.getElementById("descriptionUpdate").value=obj.description;
+    document.getElementById("categoryUpdate").value=obj.category;
+    document.getElementById("fname").innerHTML=obj.file;
+document.getElementById("fileHold").value=obj.file;
 
-                                                   
-                                                   
+</script>
+                                                        </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
-
-                                <div class="tab-pane fade" id="marketing-tab-pane" role="tabpanel" aria-labelledby="marketing-tab" tabindex="0">
-                                    <div class="row">
-                                        <div class="col-lg-12 col-md-12 col-12 mb-4 mb-lg-3">
-                                                <div class="custom-block bg-white shadow-lg">
-                                                 
-                                                        <div class="d-flex">
-                                                            <div>
-                                                                <h5 class="mb-2">Product List</h5>
-<p id="show"></p> 
-<script>
-    var productArr = JSON.parse(localStorage.getItem("productData"));
-    var element = document.getElementById("show");
-    function deleteProduct(index){
-        // alert(index);
-        productArr.splice(index,1);
-        localStorage.setItem("productData",JSON.stringify(productArr));
-        alert("Product Deleted Successfully");
-        window.location.reload();
-    }
-    if(productArr.length==0){
-        element.innerHTML="No Record Found"
-    }else{
-        var table = `<table border="1" class="table table-bordered">
-    <thead>
-        <tr>
-            <th>S.no</th>
-            <th>Product Name</th>
-            <th>Description</th>
-            <th>Category</th>
-            <th>Image</th>
-            <th colspan="2">Action</th>
-        </tr>`
-        for(var i=0;i<productArr.length;i++){
-            table+=`<tr>
-                    <td>${i+1}</td>
-                    <td>${productArr[i].productName}</td>
-                    <td>${productArr[i].description}</td>
-                    <td>${productArr[i].category}</td>
-                    <td>
-                        <img src="./product/${productArr[i].file.split('\\').pop()}" alt="Images" height="100" width="100">    
-                    </td>
-                    <td>
-                        <form action="updateProfile.html" onsubmit='updateProduct(${i})'>
-                        <button class='btn btn-danger'>Edit</button>
-                        </form>    
-                        </td>
-                    <td><button class='btn btn-danger' onclick='deleteProduct(${i})'>Delete</button></td>
-                    </tr>`;
-        }
-        table+=` </thead>
-                </table>`
-        element.innerHTML = table;
-    } 
-</script>
-                                                               
-                                                            </div>
-
-                                                           
-                                                        </div>
-
-                                                        
-                                                </div>
-                                            </div>
-
-                                           
-                                        </div>
-                                  </div>
-
                                 <div class="tab-pane fade" id="finance-tab-pane" role="tabpanel" aria-labelledby="finance-tab" tabindex="0">   <div class="row">
                                         <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
                                             <div class="custom-block bg-white shadow-lg">

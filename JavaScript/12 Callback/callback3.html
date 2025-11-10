@@ -1,0 +1,14 @@
+<!-- If we pass any function as an argument inside any other function then that function is known as callback -->
+
+<script>
+var num1 = parseInt(prompt("Enter first number"));
+var num2 = parseInt(prompt("Enter second number"));
+var myFun = function(res){
+    return res;
+};
+function display(x,y,callback){
+    var sum = x+y;
+    return callback(sum);
+}
+document.write("Result : "+display(num1,num2,myFun));
+</script>

@@ -50,4 +50,27 @@ function addProduct(){
     var obj = {productName,description,category,file,email};
     productArr = JSON.parse(localStorage.getItem("productData"));
     localStorage.setItem("productData",JSON.stringify([...productArr||[],obj]));
+    alert("Product added successfully");
+}
+
+function updateProduct(index){
+    var arr=JSON.parse(localStorage.getItem("productData"));
+    alert(index);
+    console.log(arr[index]);
+    localStorage.setItem("updateProduct",JSON.stringify(arr[index]));
+}
+
+function updateProductData(){
+    alert("check");
+    var productName = document.getElementById("productNameUpdate").value;
+    alert(productName);
+    var description = document.getElementById("descriptionUpdate").value;
+    alert(description);
+    var category = document.getElementById("categoryUpdate").value;
+    alert(category);
+    var file = document.getElementById("file")?.value;
+    alert(file);
+    var fileHold = document.getElementById("fileHold").value;
+    alert(fileHold);   
+    alert(productName+" "+description+" "+category+" "+file+" "+fileHold);
 }
