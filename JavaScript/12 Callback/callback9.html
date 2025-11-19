@@ -1,0 +1,18 @@
+<script>
+    //  callback hell | pyramid of doom
+    var num=2;
+    function myFun(num,callback){
+        document.write(num+"<br>");
+        callback(num+2,(num,callback)=>{
+            document.write(num+"<br>");
+            callback(num+2);
+        });
+    }
+    myFun(num,(num,callback)=>{
+        document.write(num+"<br>");
+        callback(num+2,(num)=>{
+            document.write(num+"<br>");
+            document.write("End of program");
+        });
+    });
+</script>

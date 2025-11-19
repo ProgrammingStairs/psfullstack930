@@ -1,0 +1,15 @@
+<script>
+    function myFun(callback){
+        var i=1;
+        var timer = setInterval(()=>{
+            if(i<=10)    
+                callback(i++);
+            else
+                clearInterval(timer);
+        },1000);
+    }
+    function printData(res){
+        document.write(res+"<br>");
+    }
+    myFun(printData);    
+</script>

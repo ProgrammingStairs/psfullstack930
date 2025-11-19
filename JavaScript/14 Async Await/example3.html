@@ -1,0 +1,17 @@
+<script>
+    function generateNumber(num){
+        return new Promise((resolve,reject)=>{
+            resolve(num+2);
+        })
+    }
+    var num=10;
+    async function display(){
+        console.log(num);
+        for(i=1;i<=5;i++){
+            var res1 = await generateNumber(num);
+            console.log(res1);
+            num=res1;
+        }        
+    }
+    display();    
+</script>

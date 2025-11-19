@@ -1,0 +1,20 @@
+<script>
+    // Asynchronous callback
+    
+    console.log("Before execution");
+    
+    function myFun(callback){
+        console.log("myFun function called");
+        //setTimeout(callback,2000);
+        setTimeout(()=>{
+            callback();
+        },3000);
+    }
+    function demo(){
+        console.log("demo function called");
+    }
+    myFun(demo);
+
+    console.log("After execution");
+    
+</script>

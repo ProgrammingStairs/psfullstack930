@@ -1,0 +1,20 @@
+<script> 
+    function checkNum(num){
+        return new Promise((resolve,reject)=>{
+            if(num>5)
+                resolve(num*num);
+            else
+                reject(num*num*num);
+        });
+    }
+    checkNum(20).then((msg)=>{
+        return msg; 
+        // return new Error("error check");
+    }).catch((value)=>{
+        return value+100;
+    }).then((res)=>{
+        document.write("then | catch resolve : "+(res));
+    }).catch((res)=>{
+        document.write("then | catch reject : "+(res));
+    });
+</script>

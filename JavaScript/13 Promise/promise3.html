@@ -1,0 +1,16 @@
+<script> 
+    function checkNum(num){
+        return new Promise((resolve,reject)=>{
+            num%2==0 ? resolve("Even number") : reject(new Error("Odd number"));
+        });
+    }
+    checkNum(45).then((msg)=>{
+        document.write(msg);
+    }).catch((obj)=>{
+        console.log(typeof obj);
+        console.log(obj);
+        document.write(obj);
+    });
+
+
+</script>

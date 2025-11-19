@@ -1,0 +1,9 @@
+<script>
+// var res = Promise.resolve("Its resolve");
+var res = Promise.reject("Its reject");
+res.then((msg)=>{
+    console.log("Resolve : "+msg);
+}).catch((error)=>{
+    console.log("Reject : "+error);
+});
+</script>

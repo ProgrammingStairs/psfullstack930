@@ -1,0 +1,17 @@
+<script>
+    // synchronous callback
+    
+    console.log("Before execution");
+    
+    function myFun(callback){
+        console.log("myFun function called");
+        callback();
+    }
+    function demo(){
+        console.log("demo function called");
+    }
+    myFun(demo);
+
+    console.log("After execution");
+    
+</script>

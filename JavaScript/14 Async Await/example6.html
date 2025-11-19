@@ -1,0 +1,24 @@
+<p id="show"></p>
+<script>
+    function display(){
+        var obj = {
+            userId : 1010,
+            id : 10,
+            title:'Its Title',
+            body:'Its body'
+        }
+        fetch("https://jsonplaceholder.typicode.com/posts",{
+            method:"POST",
+            headers:{
+                'content-type':'application/json'
+            },
+            body : JSON.stringify(obj)
+        }).then(response=> response.json())
+            .then(obj => {
+                console.log("Sent Object : ",obj);
+            }).catch((error)=>{
+                console.log(error);
+            });
+    }
+    display();    
+</script>

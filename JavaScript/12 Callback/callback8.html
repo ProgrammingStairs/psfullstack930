@@ -1,0 +1,30 @@
+<script>
+    //  callback hell | pyramid of doom
+    var a = 10 , b = 20;
+    function addition(a,b,callback){
+        var add = a+b;
+        document.write("<br>sum : "+add);
+        callback(false);
+    }
+    function subtraction(a,b,callback){
+        var sub = a-b;
+        document.write("<br>sub : "+sub);
+        callback(true);
+    }
+    function multiplication(a,b,callback){
+        var mul = a*b;
+        document.write("<br>mul : "+mul);
+        callback();
+    }
+    addition(a,b,(value)=>{
+        if(!value){
+            subtraction(a,b,(value)=>{
+                if(value){
+                    multiplication(a,b,()=>{
+                        document.write("<br>End of program");
+                    });
+                }
+            });
+        }
+    });
+</script>

@@ -1,0 +1,22 @@
+<!-- example showing the concept of currying -->
+ <script>
+    // example without currying 
+    // var a = 10,b=20,c=30;
+    // function myFunction(a,b,c){
+    //     return a+b+c;
+    // }
+    // document.write("Addition : "+myFunction(a,b,c));
+
+    // example showing the concept of closure
+    var a = 10,b=20,c=301;
+    function addition(a){
+        return function addAgain(b){
+            return function againAdd(c){
+                return a+b+c;
+            }
+        }
+    }
+    var add = addition(a);
+    var add1 = add(b);
+    document.write("Addition : "+add1(c));
+ </script>

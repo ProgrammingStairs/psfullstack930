@@ -1,0 +1,31 @@
+<!-- 
+    1. Promise simply comes to solve the problem of callback hell(pyramid of doom).
+    2. Promise is a predefined object.
+    3. If we want to make your own promise object, then in that case you need to use   
+       new keyword for creating promise object.
+    4. Promise constructor contains executor function, which executes automatically and it contains two predefined callbacks(and they are resolve and reject by default)
+    5. Promise object have three states : 
+        a. Pending 
+        b. fullfilled 
+        c. rejected
+-->
+<script> 
+    function checkNum(num){
+        return new Promise((resolve,reject)=>{
+            num%2==0 ? resolve("Even number") : reject("Odd number");
+        });
+    }
+    var res = checkNum(46);
+    // res.then((msg)=>{
+    //     document.write(msg);
+    // }).catch((msg)=>{
+    //     document.write(msg);
+    // });
+
+    res.catch((msg)=>{
+        document.write(msg);
+    }).then((msg)=>{
+        document.write(msg);
+    });
+
+</script>

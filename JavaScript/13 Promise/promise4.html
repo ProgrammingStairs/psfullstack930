@@ -1,0 +1,12 @@
+<script> 
+    function checkNum(num){
+        return new Promise((resolve,reject)=>{
+            num%2==0 ? resolve("Even number") : reject("Odd number");
+        });
+    }
+    checkNum(46).then((msg)=>{
+        document.write("Resolve : "+msg);
+    },(msg)=>{
+        document.write("Reject : "+msg);
+    })
+</script>
