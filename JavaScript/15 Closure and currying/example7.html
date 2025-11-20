@@ -1,0 +1,25 @@
+<!-- example showing the concept of freeze and seal -->
+<script>
+    var obj = {
+        fullName : "Andrew Anderson",
+        age : 45,
+        salary : 123456
+    }
+    // document.write("isSealed : "+Object.isSealed(obj));
+    // obj.salary = 1234;
+    // document.write("<br>salary : "+obj.salary);
+    // obj.address = "Indore";
+    // document.write("<br>address : "+obj.address);
+    // delete obj.age;
+    // document.write("<br>age : "+obj.age);
+
+    console.log("seal : ",Object.seal(obj));
+    document.write("isSealed : "+Object.isSealed(obj));
+    obj.salary = 1234;
+    document.write("<br>salary : "+obj.salary);
+    obj.address = "Indore";
+    document.write("<br>address : "+obj.address);
+    delete obj.age;
+    document.write("<br>age : "+obj.age);
+
+</script>

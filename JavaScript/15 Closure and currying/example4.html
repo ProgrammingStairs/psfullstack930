@@ -1,0 +1,12 @@
+<!-- example showing the concept of currying -->
+ <script>
+    function greet(greetMessage){
+        return function name(name){
+            return function message(year){
+                return `${greetMessage} ${name}, you are <b>${new Date().getFullYear()-YOB}</b> years old`
+            }
+        }
+    }
+    var YOB = 1965;
+    document.write(greet("Hello")("Andrew Anderson")(YOB));
+ </script>

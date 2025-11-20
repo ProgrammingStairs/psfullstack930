@@ -1,0 +1,51 @@
+<!-- example showing the concept of currying -->
+ <script>
+    /*
+    var a = 10,b=20,c=301;
+    function addition(a){
+        return function addAgain(b){
+            return function againAdd(c){
+                return a+b+c;
+            }
+        }
+    }
+    document.write("Addition : "+addition(a)(b)(c));
+    */
+
+    /*
+    var a = 10,b=20,c=301;
+    function addition(a){
+        var d = 100;
+        return function addAgain(b){
+            return function againAdd(c){
+                return a+b+c+d;
+            }
+        }
+    }
+    document.write("Addition : "+addition(a)(b)(c));
+    */ 
+
+    /*
+    var a = 110,b=20,c=301;
+    var addition = (a)=>{
+        var d = 100;
+        return (b)=>{
+            return (c)=>{
+                return a+b+c+d;
+            }
+        }
+    }
+    document.write("Addition : "+addition(a)(b)(c));
+    */ 
+
+    var a = 110,b=20,c=301,d=2;
+    var addition = (a)=>{
+        return (b,c)=>{
+            return (d)=>{
+                return a+b+c+d;
+            }
+        }
+    }
+    document.write("Addition : "+addition(a)(b,c)(d));
+    
+ </script>

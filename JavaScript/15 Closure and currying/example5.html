@@ -1,0 +1,33 @@
+<!-- example showing the concept of currying -->
+<script>
+    var a = parseInt(prompt("Enter value of a : "));
+    var b = parseInt(prompt("Enter value of b : "));
+    
+    function operation(operator){
+        return (a)=>{
+            return (b)=>{
+                switch(operator){
+                    case '+' : return a+b;
+                    case '-' : return a-b;
+                    case '*' : return a*b;
+                    case '/' : return a/b;
+                    case '%' : return a%b;
+                    default : return "Invalid selection";
+                }
+            }
+        }
+    }
+
+    var add = operation('+');
+    var sub = operation('-');
+    var mul = operation('*');
+    var div = operation('/');
+    var mod = operation('%');
+
+    document.write("<br>Addition : "+add(a)(b));
+    document.write("<br>Subtraction : "+sub(a)(b));
+    document.write("<br>Multiplication : "+mul(a)(b));
+    document.write("<br>Division : "+div(a)(b));
+    document.write("<br>Modulus : "+mod(a)(b));
+
+</script>
