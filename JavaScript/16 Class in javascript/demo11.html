@@ -1,0 +1,17 @@
+<!-- example showing the concept of class in javascript -->
+<script>
+    class Demo{
+        static #l = 100; 
+        static #b = 200;
+        static h = 300;
+        static getVolume(){
+            return Demo.#l * Demo.#b * Demo.h;
+        }
+        actionPerformed(){
+            document.write("<br>Volume : "+Demo.getVolume());
+        }
+    }
+    const obj = new Demo();
+    obj.actionPerformed();
+
+</script>

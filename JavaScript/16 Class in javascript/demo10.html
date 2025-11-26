@@ -1,0 +1,19 @@
+<!-- example showing the concept of class in javascript -->
+<script>
+    class Demo{
+        #l = 100; 
+        #b = 200;
+        #getArea(){
+            return this.#l * this.#b;
+        }
+        #getPerimeter(){
+            return 2  * (this.#l + this.#b);
+        }
+        actionPerformed(){
+            document.write("<br>Area : "+this.#getArea());
+            document.write("<br>Perimeter : "+this.#getPerimeter());
+        }
+    }
+    const obj = new Demo();
+    obj.actionPerformed();
+</script>

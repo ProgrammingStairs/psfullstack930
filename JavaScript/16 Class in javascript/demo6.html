@@ -1,0 +1,23 @@
+<!-- example showing the concept of class in javascript -->
+<!-- 
+constructor : 
+1. constructor is a special member function
+2. Name of constructor is same as class name(in c++, java etc) but in javascript we represents constructor by constructor keyword itself.
+3. Constructor will be called automatically when ever object of a class is created 
+4. initial work of constructor is to initialize object.
+-->
+<script>
+    class Demo{
+        constructor(){
+            this.a = 100;
+            this.b = 200;
+            document.write("<br>constructor called");
+        }
+        display(){
+            document.write("<br>value of a : "+this.a);
+            document.write("<br>value of b : "+this.b);
+        }
+    }
+    const obj = new Demo();
+    obj.display();
+</script>

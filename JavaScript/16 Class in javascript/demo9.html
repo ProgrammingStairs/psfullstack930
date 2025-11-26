@@ -1,0 +1,16 @@
+<!-- example showing the concept of class in javascript -->
+<script>
+    class Demo{
+        #a = 100; // making a as a private
+        #getData(){
+            document.write("<br>a : "+this.#a);
+        }
+        show(){
+            document.write("<br>a : "+this.#a);
+            this.#getData();
+        }
+    }
+    const obj1 = new Demo();
+    // document.write("value of a : "+obj1.a);
+    obj1.show();
+</script>

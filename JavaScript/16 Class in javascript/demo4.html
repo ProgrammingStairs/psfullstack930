@@ -1,0 +1,25 @@
+<!-- example showing the concept of class in javascript -->
+<script>
+    class Demo{
+        setData(a,b){
+            this.a=a;
+            this.b=b;
+        }
+        display(){
+            document.write("<br>a : "+this.a);
+            document.write("<br>b : "+this.b);
+        }
+        swap(){
+            var temp = this.a;
+            this.a = this.b;
+            this.b = temp;
+        }
+    }
+    const obj = new Demo();
+    obj.setData(5,6);
+    document.write("Before swapping : <br>");
+    obj.display();
+    obj.swap();
+    document.write("<br>After swapping : <br>");
+    obj.display();
+</script>
