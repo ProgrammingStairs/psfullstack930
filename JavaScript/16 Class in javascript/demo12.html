@@ -1,0 +1,15 @@
+<!-- example showing the concept of super in javascript -->
+<script>
+    class Parent{
+        constructor(){
+            document.write("<br>This is parent constructor");
+        }
+    }
+    class Child extends Parent{
+        constructor(){
+            super();
+            document.write("<br>This is child constructor");
+        }
+    }
+    const obj = new Child();
+</script>
