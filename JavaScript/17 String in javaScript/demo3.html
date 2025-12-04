@@ -1,0 +1,35 @@
+<script>
+    var str = 'This is and example of \\n "HTML" and \'CSS\'';
+    document.write("<br>"+str);
+    document.write("<br>str : "+str.substring(2,13));
+    document.write("<br>str : "+str.includes('EXAM'));
+    document.write("<br>str : "+str.includes('example'));
+    document.write("<br>str : "+str.includes('e'));
+    document.write("<br>str : "+str.indexOf('an'));
+    document.write("<br>str : "+str.lastIndexOf('an'));
+  
+  var strNew = ["Andrew","Anderson","Jack","Jackson"];
+  strNew.splice(2,1);
+  document.write("<br>strNew : "+strNew);
+
+  strNew.splice(1,0,"red","green");
+  document.write("<br>strNew : "+strNew);
+
+  strNew.splice(2,1,"purple");
+  document.write("<br>strNew : "+strNew);
+  
+  strNew = strNew.join("--");
+  document.write("<br>strNew : "+strNew);
+  
+  var s1 = "This is an example of javascript";
+  var res = s1.split(" ");
+  for(i=0;i<res.length;i++)
+      document.write("<br>"+res[i]);
+  
+  var s12 = "Andrew";
+  var s21 = "Anderson";
+  s12.concat(s21);    
+  document.write("<br>res : "+s12);
+  document.write("<br>res : "+s12.concat(s21));
+
+</script>

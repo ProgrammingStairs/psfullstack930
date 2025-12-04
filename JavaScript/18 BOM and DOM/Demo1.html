@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFun(){
+            var height = window.innerHeight;
+            var width = window.innerWidth;
+            alert("Height : "+height+"\nWidth : "+width);
+
+            var height = window.screen.height;
+            var width = window.screen.width;
+            alert("Screen Height : "+height+"\nScreen Width : "+width);
+         
+            document.write("<br>window.location.href : "+window.location.href);
+            document.write("<br>window.location.host : "+window.location.host);
+            document.write("<br>window.location.hostname : "+window.location.hostname);
+            document.write("<br>window.location.port : "+window.location.port);
+            document.write("<br>window.location.pathname : "+window.location.pathname);
+
+            document.write("<br>navigator.onLine : "+navigator.onLine);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="myFun()">Click Me</button>
+</body>
+</html>
