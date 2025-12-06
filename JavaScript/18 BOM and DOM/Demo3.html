@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .demoAgain{
+            text-decoration: underline;
+        }
+        .demo{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="demo1" class="demoAgain">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea vero laudantium sit accusantium omnis quis error alias voluptates quae facere, nihil facilis quas in repudiandae dolor. Quasi iusto nam possimus, laborum vitae fuga veritatis temporibus non, totam facilis eaque. Corrupti ratione eaque repudiandae placeat commodi minus cupiditate nesciunt mollitia quidem.
+    </div>
+    <script>
+        var demo1 = document.getElementById("demo1");
+        demo1.classList.remove("demoAgain");
+        demo1.classList.add("demo");
+    </script>
+</body>
+</html>
