@@ -13,8 +13,7 @@ Objects in Node.js can fire events.
 
 Each type of stream(stream is an object) is an Event emitter instance and throws several events at different times. 
 Following are some commonly used events:
-[ NOTE ] In case of stream, the name of this events(data,end, error,finish etc) are predefined, where as we can also creates
-                  custom events.
+[ NOTE ] In case of stream, the name of this events(data,end, error,finish etc) are predefined, where as we can also creates custom events.
                    
 1) Data:This event is fired when there is data available to read.
 
@@ -92,16 +91,15 @@ eventEmitter.emit('scream');
 -------------------------------------------------------------------------------------------------------------
 Method	                                Description
 -------------------------------------------------------------------------------------------------------------
-addListener()	                      Adds the specified listener
-emit()	                                   Call all the listeners registered with the specified 
-                                            name
-listeners()	                            Returns an array of listeners with the specified name
-on()	                                      Adds the specified listener
-once()	                                  Adds the specified listener once. When the specified  
-                                           listener has been executed, the listener is removed
-removeAllListeners()	      Removes all listeners with the specified name, or ALL listeners if 
-                            no name is specified
-removeListener()	             Removes the specified listener with the specified name
+addListener()	      Adds the specified listener
+emit()	            Call all the listeners registered with the specified name
+listeners()	        Returns an array of listeners with the specified name
+on()	              Adds the specified listener
+once()	            Adds the specified listener once. When the specified  
+                    listener has been executed, the listener is removed
+removeAllListeners()    Removes all listeners with the specified name, or ALL   
+                        listeners if no name is specified
+removeListener()	      Removes the specified listener with the specified name
                                 and many more etc.
 ---------------------------------------------------------------------------------------------------------------
 
