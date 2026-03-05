@@ -1,0 +1,15 @@
+// synchronous 
+
+function gotoroom(){
+    console.log("gotoroom");
+}
+function removegarbage(){
+    console.log("removegarbage");
+}
+function wonprize(){
+    console.log("wonprize");
+}
+
+gotoroom();
+removegarbage();
+wonprize();
